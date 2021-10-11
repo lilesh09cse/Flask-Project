@@ -1,0 +1,11 @@
+/* For testing purpose we will change the body backgroud to Yellow*/
+
+body{
+    background-color: yellow;
+}
+.container{
+    margin:auto;
+    border:1px solid maroon;
+    width:750px;
+
+}

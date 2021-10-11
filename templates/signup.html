@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" action="http://localhost:5000/saveResult">
+    <div class="form">
+
+            <table>
+                <tr>
+                    <td>Username </td>
+                    <td> <input type="text" name="usertxt"/> </td>
+                </tr>
+
+                <tr>
+                    <td>Password </td>
+                    <td> <input type="password" name="passtxt"/> </td>
+                </tr>
+
+                <tr>
+                    <td>Email  </td>
+                    <td> <input type="text" name="emailtxt"/> </td>
+                </tr>
+
+                <tr>
+                    <td>ContactNo </td>
+                    <td> <input type="text" name="contacttxt"/> </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <input type="submit" value="register"/>
+                    </td>
+                </tr>
+            </table>
+
+    </div>
+
+    
+</form>
+
+{% endblock %}

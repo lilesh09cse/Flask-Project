@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"/>
+    </head>
+
+
+
+    <body>
+        <div class = "container">
+
+            <h1 class = "logo">Lilesh's Web App</h1>
+
+            <p>
+                Welcome {{session['username']}}!
+            </p>
+            <ul class="menu">
+                <li><a href="{{url_for('index')}}">Home</a></li>
+                <li><a href="{{url_for('about')}}">AboutUs</a></li>
+                <li><a href="{{url_for('contact')}}">Contact Us</a></li>
+                <li><a href="{{url_for('aboutnew')}}">AboutUs new (in master page)</a></li>
+                <li><a href="{{url_for('contactnew')}}">Contact Us new(in master page)</a></li>
+                
+                {% if 'username' in session %}
+                
+                <li><a href="{{url_for('signout')}}">Sign Out</a></li>
+
+                {% else %}
+
+                <li><a href="{{url_for('signup')}}">Sign Up Here</a></li>
+
+                {% endif %}
+            </ul>
+
+            <h3 class = "logo">My Professional Skills</h3>
+
+            <ul class="menu">
+                <li><a href="{{url_for('skill')}}">My Skills</a></li>
+            </ul>
+
+        
+
+        <div class ="content">
+            <!-- THis is like Placeholder which will count the merge content-->
+           {% block content %}
+           {% endblock %}
+             
+        </div>
+        <!--<p style="text-align:center"-->
+    </div>
+
+
+
+
+
+    </body>
+</html>
